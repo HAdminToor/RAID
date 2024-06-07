@@ -62,13 +62,14 @@ ______________________
 
 **1. Реализуйте мониторинг по средствам rsyslog на всех Linux хостах.**
 **a. Составьте отчёт о том, как работает мониторинг**
+https://sysahelper.ru/mod/book/view.php?id=253&chapterid=78
 
 
 **2. Выполните настройку центра сертификации на базе HQ-SRV:**  
 **a. Выдайте сертификаты для SSH;**  
 **b. Выдайте сертификаты для веб серверов;**  
 
-
+https://sysahelper.ru/mod/book/view.php?id=253&chapterid=79 
 
 **3. Настройте SSH на всех Linux хостах:**  
 **a. Banner ( Authorized access only! );**   
