@@ -46,6 +46,17 @@ nano /etc/fstab
 
 _____________________
 
+Banner /etc/openssh/banner
+PermitRootLogin no
+PasswordAuthentication no
+Port 2222
+MaxAuthTries 4
+PermitEmptyPasswords no
+LoginGraceTime 5m
+ClientAliveInterval 60
+ClientAliveCountMax 5
+
+______________________
 ### Модуль 3: Эксплуатация объектов сетевой инфраструктуры
 ## **Задание модуля 3:**
 
@@ -136,6 +147,21 @@ nano /etc/strongswan/ipsec.conf
 ```
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/a54fce7e-53d3-480c-9be3-e1e8f199d8b0)  
 ![image](https://github.com/NyashMan/DEMO2024/assets/1348639/65563fc5-13b8-4c36-a392-db77c19ec9fe)  
+```
+conn gre
+auto=start
+type=tunnel
+authby=secret
+left=192.168.0.2
+right=192.168.1.2
+leftsubnet=0.0.0.0/0
+rightsubnet=0.0.0.0/0
+leftprotoport=gre
+rightprotoport=gre
+ike=aes256-sha2-256=modp1024!
+esp=aes256-sha_256!
+```
+
 ```
 systemctl enable --now ipsec.service
 ```
